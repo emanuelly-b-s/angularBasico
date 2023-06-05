@@ -5,7 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.css'],
 })
-
 export class MainComponent {
   text = 'Altere aqui..';
   savedText = '';
@@ -13,7 +12,7 @@ export class MainComponent {
   onClick() {
     this.savedText = this.text;
   }
-  
+
   update(event: any) {
     this.text = event.target.value;
   }
