@@ -6,7 +6,7 @@
 
   <input type="text" [(ngModel)]="cpf" placeholder="Digite o CPF" />
 
-  <button (click)="validateCpf()">Validar CPF</button>
+  <button (click)="validateCpf()" mask="000.000.000-00">Validar CPF</button>
   <p *ngIf="validCpf">CPF válido</p>
   <p *ngIf="!validCpf">CPF inválido</p>
 </div>
