@@ -19,9 +19,10 @@ const routes: Routes = [
   },
   { path: 'feed', component: FeedPageComponent },
   { path: 'comunity', component: ComunityPageComponent },
-  { path: 'recover', component: RecoverPageComponent },
-  { path: 'user', component: UserPageComponent },
-  { path: '**', component: NotFoundPageComponent },
+  { path: 'recover/:email', title: 'Recuperar Senha', component: RecoverPageComponent, }, // Agora podemos mandar recover valor para mandar um parâmetro para rota
+  { path: 'recover', title: 'Recuperar Senha', component: RecoverPageComponent, }, // Podemos fazer rotas com e sem parâmetros
+  { path: 'user', title: 'Página de Usuário', component: UserPageComponent },
+  { path: '**', title: 'Not Found', component: NotFoundPageComponent },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
