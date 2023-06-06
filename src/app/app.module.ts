@@ -13,7 +13,8 @@ import { RecoverPageComponent } from './recover-page/recover-page.component';
 import { UserPageComponent } from './user-page/user-page.component';
 import { PasswordComponent } from './password/password.component';
 import { FormsModule } from '@angular/forms';
-import { CreatePasswordComponent } from './create-password/create-password.component'; // Adicionado para poder usar o ngModel
+import { CreatePasswordComponent } from './create-password/create-password.component';
+import { ValidateCpfComponent } from './validate-cpf/validate-cpf.component'; // Adicionado para poder usar o ngModel
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { CreatePasswordComponent } from './create-password/create-password.compo
     UserPageComponent,
     PasswordComponent,
     CreatePasswordComponent,
+    ValidateCpfComponent,
   ],
   imports: [
     BrowserModule,
