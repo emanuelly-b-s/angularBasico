@@ -11,7 +11,9 @@ export class CreatePasswordComponent {
   protected repeat = '';
   protected passClassify = '';
   protected repeatEqualToPass = true;
+
   protected updateStrongBar() {
+    
     let finalStrong = 1;
     if (this.password.length > 3) finalStrong++;
     if (this.password.length > 5) finalStrong++;

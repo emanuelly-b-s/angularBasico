@@ -1,1 +1,12 @@
-<p>validate-cpf works!</p>
+<div>
+  <p>
+    <label>CPF</label>
+  </p>
+  <br *ngIf="breakLineOnInput" />
+
+  <input type="text" [(ngModel)]="cpf" placeholder="Digite o CPF" />
+
+  <button (click)="validateCpf()">Validar CPF</button>
+  <p *ngIf="validCpf">CPF válido</p>
+  <p *ngIf="!validCpf">CPF inválido</p>
+</div>

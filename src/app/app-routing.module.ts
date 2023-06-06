@@ -8,6 +8,7 @@ import { NewAccountPageComponent } from './new-account-page/new-account-page.com
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { RecoverPageComponent } from './recover-page/recover-page.component';
 import { UserPageComponent } from './user-page/user-page.component';
+import { ValidateCpfComponent } from './validate-cpf/validate-cpf.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'recover', component: RecoverPageComponent },
   { path: 'user', component: UserPageComponent },
   { path: '**', component: NotFoundPageComponent },
+  
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

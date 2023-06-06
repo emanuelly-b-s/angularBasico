@@ -29,6 +29,7 @@ export class PasswordComponent implements OnInit {
    * Isso não necessariamente precisa ser feito. Neste caso poderiamos usar apenas checkBoxToogle()
    * e deixar essa função sem parâmetros já que não usamos o resultado do evento 'newValue'.
    */
+  
   protected checkBoxToogle(newValue: any) {
     this.updateInput();
     this.seePasswordChanged.emit(this.seePassword);
@@ -56,7 +57,7 @@ export class PasswordComponent implements OnInit {
     this.inputText = '';
     this.updateInput();
   }
-  
+
   protected passwordFocusout() {
     if (this.inputText !== '') return;
     this.initialState = true;
