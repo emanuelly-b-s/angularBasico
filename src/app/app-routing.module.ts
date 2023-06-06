@@ -12,14 +12,16 @@ import { ValidateCpfComponent } from './validate-cpf/validate-cpf.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
-  { path: 'login', component: LoginPageComponent },
+  {
+    path: 'login',
+    component: LoginPageComponent,
+    children: [{ path: 'newaccount', component: NewAccountPageComponent }],
+  },
   { path: 'feed', component: FeedPageComponent },
   { path: 'comunity', component: ComunityPageComponent },
-  { path: 'newaccount', component: NewAccountPageComponent },
   { path: 'recover', component: RecoverPageComponent },
   { path: 'user', component: UserPageComponent },
   { path: '**', component: NotFoundPageComponent },
-  
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

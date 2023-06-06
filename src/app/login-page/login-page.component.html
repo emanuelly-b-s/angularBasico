@@ -3,14 +3,15 @@
   <label>Email/Username</label>
   <br />
   <input />
-
-</p>     
+</p>
 <app-password [seePassword]="false" [breakLineOnInput]="true" />
 
 <p>
   <button>Logar</button>
 </p>
 
-<p>Não possui conta? <a href="/newaccount">Crie uma agora mesmo!</a> </p>
+<p>Não possui conta? <a routerLink="newaccount">Crie uma agora mesmo!</a></p>
 
 <p>Esqueceu sua senha? <a href="/recover">Recupere agora!</a></p>
+
+<router-outlet></router-outlet>
