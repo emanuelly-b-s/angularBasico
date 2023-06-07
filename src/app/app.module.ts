@@ -16,6 +16,8 @@ import { FormsModule } from '@angular/forms';
 import { CreatePasswordComponent } from './create-password/create-password.component';
 import { ValidateCpfComponent } from './validate-cpf/validate-cpf.component'; // Adicionado para poder usar o ngModel
 import { HttpClientModule } from '@angular/common/http'; // Added for use HttpClient
+import { ReactiveFormsModule } from '@angular/forms'; // Added for use ReactiveForms
+
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import { HttpClientModule } from '@angular/common/http'; // Added for use HttpCl
     BrowserModule,
     AppRoutingModule,
     FormsModule, // Adicionado para poder usar o ngModel
-    HttpClientModule // Added for use HttpClient
+    HttpClientModule, // Added for use HttpClient
+    ReactiveFormsModule // Added for use ReactiveForms
   ],
   providers: [],
   bootstrap: [AppComponent],

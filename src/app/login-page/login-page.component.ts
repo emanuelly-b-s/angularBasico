@@ -14,11 +14,12 @@ export class LoginPageComponent {
   passwordChanged(event: any) {
     this.password = event;
   }
+
   login() {
     // Aqui precisariamos fazer essa verificação no banco de dados
-    if (this.email == 'email@email.com' && this.password == '123') {
+    if (this.email == 'manuzika@email.com' && this.password == '123') {
       // Isso evidentemente não é seguro, mas a ideia é bom e será melhorada no futuro
-      sessionStorage.setItem('user', 'pamella');
+      sessionStorage.setItem('user', 'manuuuu');
       this.router.navigate(['/feed']);
     }
   }
