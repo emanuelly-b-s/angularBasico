@@ -1,3 +1,4 @@
+import { CardComponent } from './card/card.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http'; // Added for use HttpCl
 import { ReactiveFormsModule } from '@angular/forms'; // Added for use ReactiveForms
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material/button'; // Added for use Angular Material Button
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card'; // Added for use Angular Material Button
 
 
 @NgModule({
@@ -37,6 +39,7 @@ import { MatButtonModule } from '@angular/material/button'; // Added for use Ang
     PasswordComponent,
     CreatePasswordComponent,
     ValidateCpfComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,7 +48,8 @@ import { MatButtonModule } from '@angular/material/button'; // Added for use Ang
     HttpClientModule, // Added for use HttpClient
     ReactiveFormsModule, BrowserAnimationsModule,// Added for use ReactiveForms
     MatSlideToggleModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
