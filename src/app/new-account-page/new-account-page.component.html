@@ -1,14 +1,30 @@
 <h1>Nova Conta</h1>
 
-  <label>Email</label>
-  <br />
-  <input type="text" [formControl]="email" />
-  <div *ngIf="email.invalid" style="color: red">
-    <div *ngIf="email.errors?.['required']">Name is required.</div>
-    <div *ngIf="email.errors?.['minlength']">
-      Name must be at least 4 characters long.
-    </div>
+<label>Email</label>
+<br />
+<input type="text" [formControl]="email" />
+<div *ngIf="email.invalid" style="color: red">
+  <div *ngIf="email.errors?.['required']">Name is required.</div>
+  <div *ngIf="email.errors?.['minlength']">
+    Name must be at least 4 characters long.
   </div>
+</div>
+
+<label>Phone number</label>
+<br />
+<input type="text" [formControl]="phoneNumber" />
+<div *ngIf="phoneNumber.invalid" style="color: red">
+  <div *ngIf="phoneNumber.errors?.['required']">Phone number is required.</div>
+  <div *ngIf="phoneNumber.errors?.['pattern']">
+    The phone number cannot contain special characters/letters
+  </div>
+  <div *ngIf="phoneNumber.errors?.['minlength']">
+    Phone number must be at least 9 characters long.
+  </div>
+  <div *ngIf="phoneNumber.errors?.['maxlength']">
+    Phone number must be a maximum of 13 characters long.
+  </div>
+</div>
 
 <p>
   <label>CEP</label>

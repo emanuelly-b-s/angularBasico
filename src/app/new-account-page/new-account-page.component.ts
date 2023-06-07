@@ -19,6 +19,13 @@ export class NewAccountPageComponent {
     Validators.minLength(4),
   ]);
 
+  phoneNumber = new FormControl('', [
+    Validators.required,
+    Validators.minLength(9),
+    Validators.maxLength(13),
+    Validators.pattern('^[0-9]*$')
+  ]);
+
   constructor(private cep: CepService) {}
   cepAdded() {
     this.cep.getStreet(this.cepvalue).subscribe((x) => {
