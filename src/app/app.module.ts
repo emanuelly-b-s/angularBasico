@@ -17,6 +17,9 @@ import { CreatePasswordComponent } from './create-password/create-password.compo
 import { ValidateCpfComponent } from './validate-cpf/validate-cpf.component'; // Adicionado para poder usar o ngModel
 import { HttpClientModule } from '@angular/common/http'; // Added for use HttpClient
 import { ReactiveFormsModule } from '@angular/forms'; // Added for use ReactiveForms
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button'; // Added for use Angular Material Button
 
 
 @NgModule({
@@ -40,7 +43,9 @@ import { ReactiveFormsModule } from '@angular/forms'; // Added for use ReactiveF
     AppRoutingModule,
     FormsModule, // Adicionado para poder usar o ngModel
     HttpClientModule, // Added for use HttpClient
-    ReactiveFormsModule // Added for use ReactiveForms
+    ReactiveFormsModule, BrowserAnimationsModule,// Added for use ReactiveForms
+    MatSlideToggleModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent],

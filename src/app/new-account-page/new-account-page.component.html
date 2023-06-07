@@ -1,9 +1,15 @@
 <h1>Nova Conta</h1>
-<p>
+
   <label>Email</label>
   <br />
-  <input />
-</p>
+  <input type="text" [formControl]="email" />
+  <div *ngIf="email.invalid" style="color: red">
+    <div *ngIf="email.errors?.['required']">Name is required.</div>
+    <div *ngIf="email.errors?.['minlength']">
+      Name must be at least 4 characters long.
+    </div>
+  </div>
+
 <p>
   <label>CEP</label>
   <br />
