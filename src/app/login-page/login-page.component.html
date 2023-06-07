@@ -4,7 +4,12 @@
   <br />
   <input [(ngModel)]="email" />
 </p>
-<app-password [seePassword]="false" [breakLineOnInput]="true" />
+
+<app-password [seePassword]="false" [breakLineOnInput]="true" (valueChanged)="passwordChanged($event)" />
+
+<p>
+  <button (click)="login()">Logar</button>
+</p>
 
 <p>
   <button>Logar</button>

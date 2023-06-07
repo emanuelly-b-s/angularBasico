@@ -9,8 +9,14 @@ import { CepService } from '../cep-service/cep.service';
 export class NewAccountPageComponent {
   cepvalue = '';
   ruavalue = '';
+  ufValue = '';
+  bairroValue = '';
   constructor(private cep: CepService) {}
   cepAdded() {
-    this.cep.getStreet(this.cepvalue);
+    this.cep.getStreet(this.cepvalue).subscribe((x) => {
+      this.ruavalue = x.logradouro,
+      this.ufValue = x.uf,
+      this.bairroValue = x.bairro;
+    });
   }
 }
