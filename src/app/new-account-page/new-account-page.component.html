@@ -5,6 +5,16 @@
   <input />
 </p>
 <p>
+  <label>CEP</label>
+  <br />
+  <input [(ngModel)]="cepvalue" (change)="cepAdded()" />
+</p>
+<p>
+  <label>Rua</label>
+  <br />
+  <input [(ngModel)]="ruavalue" />
+</p>
+<p>
   <label>Username</label>
   <br />
   <input />
@@ -12,7 +22,4 @@
 <app-create-password />
 <p>
   <button>Criar Conta</button>
-</p>
-<p>
-  <app-validate-cpf></app-validate-cpf>
 </p>
